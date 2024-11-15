@@ -13,7 +13,7 @@ import { GiBrain } from "react-icons/gi";
 const HomePage = () => {
   const route = useNavigate();
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-green-800 via-blue-500 to-blue-800 text-white font-sans">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-green-800 via-pink-800 to-green-800 text-white font-sans">
       {/* Navbar */}
       <header className="w-full flex justify-between items-center py-4 px-6 bg-opacity-80 backdrop-blur-md">
         <h1 className="text-2xl font-bold tracking-wider flex items-center space-x-2">
@@ -30,7 +30,7 @@ const HomePage = () => {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow flex flex-col items-center justify-center text-center px-6">
+      <main className="flex-grow flex flex-col items-center justify-center text-center px-6 mt-4">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
           Welcome to <span className="text-yellow-400">BrainX</span>
         </h2>
@@ -51,11 +51,11 @@ const HomePage = () => {
       <section className=" text-white w-full py-16">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h3 className="text-3xl font-bold mb-10">Features</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center">
-              <FaRobot className="text-4xl text-indigo-200 mb-4" />
+          <div className="grid  grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex   p-4 flex-col items-center">
+              <FaRobot className="text-4xl  text-indigo-200 mb-4" />
               <h4 className="text-xl font-semibold">AI-Powered Responses</h4>
-              <p className="text-black">
+              <p className="text-indigo-200">
                 BrainX provides intelligent, AI-driven responses to your
                 questions.
               </p>
@@ -63,14 +63,14 @@ const HomePage = () => {
             <div className="flex flex-col items-center">
               <FaLightbulb className="text-4xl text-yellow-400 mb-4" />
               <h4 className="text-xl font-semibold">Creative Suggestions</h4>
-              <p className="text-black">
+              <p className="text-indigo-200">
                 Get innovative ideas and insights to boost your creativity.
               </p>
             </div>
             <div className="flex flex-col items-center">
               <FaUsers className="text-4xl text-indigo-200 mb-4" />
               <h4 className="text-xl font-semibold">User-Friendly</h4>
-              <p className="text-black">
+              <p className="text-indigo-200">
                 Simple and intuitive interface designed for all users.
               </p>
             </div>
