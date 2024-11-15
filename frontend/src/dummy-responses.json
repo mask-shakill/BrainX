@@ -1,0 +1,167 @@
+[
+  { "text": "Hello! How can I assist you today?", "sender": "ai" },
+  { "text": "Sure, I'm here to help. What do you need?", "sender": "ai" },
+  { "text": "Did you know that honey never spoils?", "sender": "ai" },
+  {
+    "text": "Let me know if you'd like more information on that topic.",
+    "sender": "ai"
+  },
+  { "text": "What else would you like to know?", "sender": "ai" },
+  { "text": "I hope you're having a great day!", "sender": "ai" },
+  { "text": "Can I help with anything else?", "sender": "ai" },
+  {
+    "text": "Here's a fun fact: The Eiffel Tower can grow by up to 6 inches in summer.",
+    "sender": "ai"
+  },
+  { "text": "Did you need more details about that?", "sender": "ai" },
+  {
+    "text": "Let's take it step by step, what's the first thing you'd like help with?",
+    "sender": "ai"
+  },
+  {
+    "text": "Sure! Here's a quick overview of what you asked.",
+    "sender": "ai"
+  },
+  { "text": "How can I make this clearer for you?", "sender": "ai" },
+  { "text": "Let's dive into it!", "sender": "ai" },
+  { "text": "Okay, let's figure this out together.", "sender": "ai" },
+  {
+    "text": "Here's an interesting tip: Always back up your data!",
+    "sender": "ai"
+  },
+  { "text": "I can provide more resources if you'd like.", "sender": "ai" },
+  {
+    "text": "It seems like you're on the right track. Keep going!",
+    "sender": "ai"
+  },
+  { "text": "That was a great question! Let me explain.", "sender": "ai" },
+  { "text": "I'm here to help, don't hesitate to ask more.", "sender": "ai" },
+  {
+    "text": "Fun fact: Bananas are berries, but strawberries aren't!",
+    "sender": "ai"
+  },
+  {
+    "text": "That's an interesting query! Let's break it down.",
+    "sender": "ai"
+  },
+  { "text": "Here's how you can solve that problem.", "sender": "ai" },
+  { "text": "Everything seems good so far, let's move on.", "sender": "ai" },
+  { "text": "I like your approach to this. Let's keep going.", "sender": "ai" },
+  { "text": "Sure! I'm ready to give you a detailed answer.", "sender": "ai" },
+  {
+    "text": "That's a common question. Here's an answer for you.",
+    "sender": "ai"
+  },
+  { "text": "Let's go over it one more time.", "sender": "ai" },
+  { "text": "You got it! Let's keep moving forward.", "sender": "ai" },
+  { "text": "That sounds fun! What's next?", "sender": "ai" },
+  {
+    "text": "By the way, did you know the human nose can detect over 1 trillion smells?",
+    "sender": "ai"
+  },
+  { "text": "If you have any doubts, feel free to ask!", "sender": "ai" },
+  { "text": "It's always good to double-check your work.", "sender": "ai" },
+  { "text": "You're doing great! Let's tackle the next step.", "sender": "ai" },
+  { "text": "Good question! Let me explain it step by step.", "sender": "ai" },
+  { "text": "Just let me know if you'd like more details.", "sender": "ai" },
+  {
+    "text": "I'm happy to help! What would you like to discuss next?",
+    "sender": "ai"
+  },
+  { "text": "I think you're on the right path. Keep it up!", "sender": "ai" },
+  {
+    "text": "Here's a little trivia: There are more stars in the universe than grains of sand on all the beaches on Earth.",
+    "sender": "ai"
+  },
+  {
+    "text": "The answer to that is quite simple, let me explain.",
+    "sender": "ai"
+  },
+  {
+    "text": "Let's look at this from a different perspective.",
+    "sender": "ai"
+  },
+  { "text": "Don't worry, we'll go through it slowly.", "sender": "ai" },
+  { "text": "Keep going, you're doing amazing!", "sender": "ai" },
+  { "text": "Let me clarify that for you.", "sender": "ai" },
+  { "text": "Here's another way to approach it.", "sender": "ai" },
+  { "text": "Absolutely! Let me show you how.", "sender": "ai" },
+  {
+    "text": "You're asking great questions! Let's dive deeper.",
+    "sender": "ai"
+  },
+  { "text": "Let's break this down into simpler steps.", "sender": "ai" },
+  { "text": "I think you'll find this information helpful.", "sender": "ai" },
+  { "text": "You're really grasping this! Nice work.", "sender": "ai" },
+  { "text": "Let me add some more details to this.", "sender": "ai" },
+  { "text": "That was a great idea! Let's explore further.", "sender": "ai" },
+  { "text": "You're on fire today! Keep up the great work.", "sender": "ai" },
+  { "text": "That’s an interesting fact! Want to learn more?", "sender": "ai" },
+  { "text": "Well done! Here’s a little more on the topic.", "sender": "ai" },
+  { "text": "You're doing fantastic! Let's continue.", "sender": "ai" },
+  { "text": "I'm here to help anytime! Just ask.", "sender": "ai" },
+  { "text": "Let me share a cool trick with you!", "sender": "ai" },
+  { "text": "Sure thing! Let's dive deeper into this.", "sender": "ai" },
+  { "text": "Can I help with anything else today?", "sender": "ai" },
+  { "text": "It's always a pleasure to assist you.", "sender": "ai" },
+  { "text": "Do you want more suggestions?", "sender": "ai" },
+  { "text": "I'll break it down for you, no problem.", "sender": "ai" },
+  { "text": "That’s a clever thought! Let’s expand on that.", "sender": "ai" },
+  { "text": "Great! Here's some more insight for you.", "sender": "ai" },
+  {
+    "text": "I’m happy to answer any more questions you have.",
+    "sender": "ai"
+  },
+  { "text": "Let’s keep going! I'm enjoying this.", "sender": "ai" },
+  {
+    "text": "Want to learn a random fact? The longest hiccuping spree lasted 68 years!",
+    "sender": "ai"
+  },
+  {
+    "text": "I love answering your questions. Let’s continue.",
+    "sender": "ai"
+  },
+  { "text": "Let me share some more fun trivia with you.", "sender": "ai" },
+  { "text": "You're asking some great questions today!", "sender": "ai" },
+  { "text": "Let's continue, I'm enjoying this conversation!", "sender": "ai" },
+  {
+    "text": "Here's a cool fact for you: The shortest commercial flight is just 57 seconds!",
+    "sender": "ai"
+  },
+  {
+    "text": "I’m glad you’re here. What else would you like to ask?",
+    "sender": "ai"
+  },
+  { "text": "Let’s move on! We’re making great progress.", "sender": "ai" },
+  { "text": "I can help with more if you'd like.", "sender": "ai" },
+  {
+    "text": "You're doing fantastic! Let’s get to the next step.",
+    "sender": "ai"
+  },
+  { "text": "That’s an amazing question. Here's the answer.", "sender": "ai" },
+  {
+    "text": "I can explain that in more detail if you’d like.",
+    "sender": "ai"
+  },
+  { "text": "We’re on a roll! Let's continue.", "sender": "ai" },
+  { "text": "Can I assist you with any other questions?", "sender": "ai" },
+  { "text": "I hope you found that answer helpful.", "sender": "ai" },
+  {
+    "text": "Let's keep the ball rolling! What else can I help with?",
+    "sender": "ai"
+  },
+  { "text": "Let’s dive deeper into this subject.", "sender": "ai" },
+  {
+    "text": "Great question! Here’s the information you need.",
+    "sender": "ai"
+  },
+  { "text": "I’ve got more to share if you're interested.", "sender": "ai" },
+  { "text": "That's awesome! Keep those questions coming.", "sender": "ai" },
+  { "text": "Here’s some more info for you.", "sender": "ai" },
+  {
+    "text": "I can guide you through this. Let’s go step-by-step.",
+    "sender": "ai"
+  },
+  { "text": "You’ve got it! Let’s move to the next thing.", "sender": "ai" },
+  { "text": "Nice work! You’re doing great!", "sender": "ai" }
+]

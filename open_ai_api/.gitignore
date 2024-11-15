@@ -1,0 +1,31 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment directory
+venv/
+
+# Flask instance folder
+instance/
+
+# Environment variables file
+.env
+
+# IDE or editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Dependency directories
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+
+# SQLite database (if used)
+*.db
+
+# Docker-related files (if you use Docker)
+*.docker

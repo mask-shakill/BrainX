@@ -1,31 +1,66 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-
+import React, { useState } from "react";
+import { FaPaperPlane } from "react-icons/fa";
+import dummyResponses from "./dummy-responses.json";
 const ChatPage = () => {
-  const navigate = useNavigate();
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+
+  const handleSend = async () => {
+    if (!input.trim()) return;
+
+    setMessages([...messages, { text: input, sender: "user" }]);
+
+    const randomResponse =
+      dummyResponses[Math.floor(Math.random() * dummyResponses.length)].text;
+
+    setMessages((prev) => [...prev, { text: randomResponse, sender: "ai" }]);
+
+    setInput("");
+  };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-green-900 via-blue-500 to-blue-700 text-white">
-      <button
-        onClick={() => navigate("/")}
-        className="absolute top-4 left-4 bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-500"
-      >
-        Back
-      </button>
-      <h1 className="text-3xl font-bold mb-6 text-yellow-300">BrainX Chat</h1>
-      <div className="w-full max-w-2xl bg-white rounded-lg shadow-lg p-6 text-gray-800">
-        <div className="h-96 overflow-y-scroll border-b-2 border-gray-200 mb-4">
-          {/* Chat messages will go here */}
-          <p className="text-center text-gray-500">Start a conversation...</p>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-green-900 to-blue-500 text-purple-100 px-4">
+      <h1 className="text-[50px]  font-bold mb-6 text-yellow-300">
+        BrainX Chat
+      </h1>
+      <h1 className="text-2xl font-bold mb-6">What can I help with?</h1>
+
+      <div className="w-full max-w-2xl bg-green-900 rounded-xl shadow-lg p-6 space-y-4">
+        <div className="h-80 overflow-y-scroll  p-4 space-y-3">
+          {messages.map((msg, index) => (
+            <div
+              key={index}
+              className={`flex ${
+                msg.sender === "user" ? "justify-end" : "justify-start"
+              }`}
+            >
+              <div
+                className={`${
+                  msg.sender === "user"
+                    ? "bg-yellow-400 text-black"
+                    : "bg-yellow-400 text-black"
+                } max-w-xs px-4 py-2 rounded-lg shadow-md`}
+              >
+                {msg.text}
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="flex">
+
+        <div className="flex items-center">
           <input
             type="text"
-            className="flex-grow p-3 rounded-l-lg border-t border-b border-l border-gray-300 focus:outline-none"
+            className="flex-grow text-black p-3 rounded-l-lg border-t border-b border-l border-purple-600 bg-white placeholder-black focus:outline-none"
             placeholder="Type your message..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleSend()}
           />
-          <button className="bg-yellow-400 text-black px-6 py-3 rounded-r-lg hover:bg-yellow-700">
-            Send
+          <button
+            onClick={handleSend}
+            className="bg-yellow-400 text-purple-200 px-5 py-[17px] rounded-r-lg hover:bg-purple-600 transition-all"
+          >
+            <FaPaperPlane className="text-black" />
           </button>
         </div>
       </div>
