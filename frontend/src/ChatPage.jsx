@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FaPaperPlane } from "react-icons/fa";
-import dummyResponses from "./dummy-responses.json";
+import { FaPaperPlane, FaRobot } from "react-icons/fa";
+import apiResponse from "../public/api.json";
 
 const ChatPage = () => {
   const [messages, setMessages] = useState([]);
@@ -14,7 +14,7 @@ const ChatPage = () => {
     setLoading(true);
 
     const randomResponse =
-      dummyResponses[Math.floor(Math.random() * dummyResponses.length)].text;
+      apiResponse[Math.floor(Math.random() * apiResponse.length)].text;
 
     setTimeout(() => {
       setMessages((prev) => [...prev, { text: randomResponse, sender: "ai" }]);
@@ -29,20 +29,27 @@ const ChatPage = () => {
   }, [messages]);
 
   return (
-    <div>
-      <div
-        className="min-h-screen flex flex-col items-center justify-center 
-    bg-gradient-to-r from-green-800 via-pink-800 to-green-800 text-purple-100 px-4"
-      >
-        <h1 className="text-[50px] font-bold mb-6 text-yellow-300">
-          BrainX Chat
-        </h1>
-        <h1 className="text-2xl font-bold mb-6">What can I help with?</h1>
+    <div className="min-h-screen flex flex-col items-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      {/* Header */}
+      <header className="w-full py-6 px-4 bg-black/30 backdrop-blur-md border-b border-white/10">
+        <div className="max-w-4xl mx-auto flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <FaRobot className="text-2xl text-purple-400" />
+            <h1 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              BrainX Chat
+            </h1>
+          </div>
+          <p className="text-sm text-gray-400">What can I help with today?</p>
+        </div>
+      </header>
 
-        <div className="w-full max-w-2xl bg-green-1000 rounded-xl shadow-lg shadow-yellow-400 p-6 space-y-4 border-t">
+      {/* Chat Container */}
+      <main className="flex-grow w-full max-w-4xl px-4 py-8">
+        <div className="h-[80vh] flex flex-col bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 shadow-xl">
+          {/* Messages Area - Scrollable */}
           <div
             id="chat-container"
-            className="h-80 overflow-y-scroll p-4 space-y-3"
+            className="flex-grow overflow-y-auto p-4 space-y-4"
           >
             {messages.map((msg, index) => (
               <div
@@ -52,48 +59,52 @@ const ChatPage = () => {
                 }`}
               >
                 <div
-                  className={`${
+                  className={`max-w-[80%] px-4 py-3 rounded-2xl ${
                     msg.sender === "user"
-                      ? "bg-white text-black"
-                      : "bg-green-500 text-black"
-                  } max-w-xs px-4 py-2 rounded-lg shadow-md`}
+                      ? "bg-purple-500/90 text-white"
+                      : "bg-gray-800/90 text-gray-100"
+                  } shadow-md transition-all duration-200`}
                 >
-                  {msg.text}
+                  <p className="text-sm leading-relaxed">{msg.text}</p>
                 </div>
               </div>
             ))}
 
             {loading && (
               <div className="flex justify-start">
-                <div className="bg-green-600 text-black max-w-xs px-4 py-2 rounded-lg shadow-md">
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 mr-2 bg-black rounded-full animate-pulse"></div>
-                    <div className="w-2 h-2 mr-2 bg-black rounded-full animate-pulse"></div>
-                    <div className="w-2 h-2 bg-black rounded-full animate-pulse"></div>
+                <div className="bg-gray-800/90 text-gray-100 max-w-[80%] px-4 py-3 rounded-2xl shadow-md">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-gray-300 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-gray-300 rounded-full animate-pulse delay-100"></div>
+                    <div className="w-2 h-2 bg-gray-300 rounded-full animate-pulse delay-200"></div>
                   </div>
                 </div>
               </div>
             )}
           </div>
 
-          <div className="flex items-center ">
-            <input
-              type="text"
-              className="flex-grow text-black py-3 px-[6px] rounded-l-lg border-t border-b border-l border-purple-600 bg-white placeholder-black focus:outline-none "
-              placeholder="Type your message..."
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSend()}
-            />
-            <button
-              onClick={handleSend}
-              className="bg-pink-800 text-purple-200 px-5 py-[16.5px] rounded-r-lg hover:bg-green-600 transition-all "
-            >
-              <FaPaperPlane className="text-white" />
-            </button>
+          {/* Fixed Input Area at Bottom */}
+          <div className="sticky bottom-0 border-t border-white/10 bg-gray-900/50 p-4">
+            <div className="flex items-center space-x-2">
+              <input
+                type="text"
+                className="flex-grow bg-gray-800/50 text-white py-3 px-4 rounded-xl border border-white/10 focus:outline-none focus:border-purple-400/50 focus:ring-2 focus:ring-purple-400/20 placeholder-gray-400 transition-all"
+                placeholder="Type your message here..."
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleSend()}
+              />
+              <button
+                onClick={handleSend}
+                className="p-3 bg-purple-500/90 hover:bg-purple-600 text-white rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400/50 disabled:opacity-50"
+                disabled={!input.trim()}
+              >
+                <FaPaperPlane className="w-5 h-5" />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };
